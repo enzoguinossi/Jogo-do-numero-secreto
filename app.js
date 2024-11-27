@@ -69,6 +69,9 @@ function acertou() {
 
     // Habilita o botão de reiniciar
     document.getElementById('reiniciar').removeAttribute('disabled');
+    // Desliga o botão de chutar
+    document.getElementById('verificar').setAttribute('disabled', true);
+
 }
 
 // Função executada caso a pessoa erre
@@ -88,6 +91,8 @@ function reiniciarJogo() {
     limparInput();
     mensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
+    document.getElementById('verificar').removeAttribute('disabled');
+
 }
 
 //Mensagem inicial
