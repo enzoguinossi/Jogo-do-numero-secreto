@@ -23,18 +23,15 @@ function geradorDeNumero() {
     return numeroEscolhido;
 }
 
-// Define o numeroSecreto com o valor gerado pelo geradorDeNumero
-let numeroSecreto = geradorDeNumero();
+let numeroSecreto = geradorDeNumero(); // Define o numeroSecreto com o valor gerado pelo geradorDeNumero
+let quantidadeDeChutes = 1; // Define a quantidade de chutes que a pessoa usou para descobrir o número secreto
 
-// Define a quantidade de chutes que a pessoa usou para descobrir o número secreto
-let quantidadeDeChutes = 1;
 
-// Exibição inicial do jogo na tela
+// Exibição inicial do texto do jogo na tela
 function mensagemInicial() {
     exibirTextoNaTela('h1', 'Jogo do número secreto');
     exibirTextoNaTela('p', `Escolha um número entre 1 e ${numeroMaximo}`);
 }
-mensagemInicial();
 
 // Função para limpar o campo de input do usuário
 function limparInput() {
@@ -67,10 +64,9 @@ function acertou() {
     exibirTextoNaTela('h1', 'Você acertou!');
     exibirTextoNaTela('p', mensagemDeAcerto);
 
-    // Habilita o botão de reiniciar
-    document.getElementById('reiniciar').removeAttribute('disabled');
-    // Desliga o botão de chutar
-    document.getElementById('verificar').setAttribute('disabled', true);
+    document.getElementById('reiniciar').removeAttribute('disabled'); // Habilita o botão de reiniciar
+    document.getElementById('verificar').setAttribute('disabled', true); // Desliga o botão de chutar
+
 
 }
 
@@ -90,10 +86,10 @@ function reiniciarJogo() {
     quantidadeDeChutes = 1; // Reseta a quantidade de chutes
     limparInput();
     mensagemInicial();
-    document.getElementById('reiniciar').setAttribute('disabled', true);
-    document.getElementById('verificar').removeAttribute('disabled');
+    document.getElementById('reiniciar').setAttribute('disabled', true); // Desabilita o botão de novo jogo.    
+    document.getElementById('verificar').removeAttribute('disabled'); // Habilita o botão de chute.
 
 }
 
-//Mensagem inicial
 mensagemInicial();
+
