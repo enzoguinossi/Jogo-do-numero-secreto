@@ -12,9 +12,7 @@ function geradorDeNumero() {
         listaDeNumerosSorteados = []; // Reinicia a lista de números sorteados
         console.log('Reiniciando lista de números sorteados.');
     }
-
     let numeroEscolhido;
-
     do {
         numeroEscolhido = parseInt(Math.random() * numeroMaximo + 1); // Sorteia um número
     } while (listaDeNumerosSorteados.includes(numeroEscolhido)); // Garante que não foi sorteado antes
@@ -63,11 +61,8 @@ function acertou() {
     let mensagemDeAcerto = `O número secreto era ${numeroSecreto}. Você precisou de ${quantidadeDeChutes} ${palavraTentativas}!`;
     exibirTextoNaTela('h1', 'Você acertou!');
     exibirTextoNaTela('p', mensagemDeAcerto);
-
     document.getElementById('reiniciar').removeAttribute('disabled'); // Habilita o botão de reiniciar
     document.getElementById('verificar').setAttribute('disabled', true); // Desliga o botão de chutar
-
-
 }
 
 // Função executada caso a pessoa erre
@@ -88,7 +83,6 @@ function reiniciarJogo() {
     mensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true); // Desabilita o botão de novo jogo.    
     document.getElementById('verificar').removeAttribute('disabled'); // Habilita o botão de chute.
-
 }
 
 mensagemInicial();
